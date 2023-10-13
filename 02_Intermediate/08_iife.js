@@ -19,3 +19,28 @@
 ((name)=>{
     console.log(`I'm${name}...from arrow funtion`);
 })("iife");//-> we can give parameter here also
+
+//Implicite Scope
+if(20>10) console.log("test1");
+
+//we can write in this way also // prefer not to use- not much readable code 
+if(20>10) console.log("test 1"),console.log("test 2");// using `,` we can add  more line of code no need to use curlu braces
+
+//nested if-else if-else
+// if(){          --> from first if one statement is true then other will not execute
+
+// }else if{
+
+// }else if(){
+
+// }else{
+
+// }
+
+// AND OR 
+if(true && true){ // AND 
+    //both condition must be true
+}
+if(false || true){// OR
+    //if one of condition is true then it will execute
+}
