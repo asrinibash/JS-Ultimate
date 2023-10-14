@@ -36,6 +36,7 @@
 
 
 // //Nullish Coalescing Operator (??)--> this is all for 2 keywords: null and undefined
+//used in database operations
 
 // let val= 10 ?? 15; //`??` nullish coalescing operator 
 // //here 10 will be assignes
