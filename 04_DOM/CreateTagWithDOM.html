@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+</body>
+<script>
+    const div=document.createElement('div');
+    console.log(div);
+    div.className="main";
+    div.id=Math.round(Math.random()*10+1);
+    div.style.backgroundColor="green";
+    div.style.padding="12px";
+    div.style.borderRadius="10px";
+    // div.innerHTML="Hello..Srinibash"; 
+    //innerText first refer that location then override the given text
+
+    //optimise approach
+    const addText=document.createTextNode("hello..Srinibash");
+    div.appendChild(addText);
+
+    //adding div element to the browser
+    document.body.appendChild(div);
+
+</script>
+
+
+</html>

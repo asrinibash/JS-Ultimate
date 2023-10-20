@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM | Practice</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+   const parent=document.querySelector('.week');
+//    console.log(parent);
+//    console.log(parent.children);//accesing its all children
+//    console.log(parent.children[1].innerHTML);//getting data of 2nd child of parent
+
+//    for (let i = 0; i < parent.children.length; i++) {
+//     console.log(parent.children[i].innerHTML);    
+//    }
+
+   parent.children[1].style.color="orange"
+//    console.log(parent.firstElementChild);
+//    console.log(parent.lastElementChild);
+
+const dayOne=document.querySelector('.day');
+// console.log(dayOne.innerHTML);
+// console.log(dayOne.parentElement);
+// console.log(dayOne.nextElementSibling.innerHTML);
+
+//NodeList
+console.log("Node : ",parent.childNodes);//return the all the childs of parent including linebrake text node--> returns 9 elements
+
+</script>
+</html>

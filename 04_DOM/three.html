@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM | Part - 3</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+//create a function at add child Element in ul
+
+function addElement(langName){
+    const li=document.createElement('li');
+    li.innerHTML=`${langName}`;
+    document.body.querySelector(".language").appendChild(li);
+}
+addElement("Python");
+addElement("TypeScript");
+//the above function is not optimise-here to add an element we have to traverse hole tree
+
+//now add language in a optimse way
+function addOptiElement(langName){
+    const li=document.createElement("li");
+    li.appendChild(document.createTextNode(langName));
+    document.querySelector('.language').appendChild(li);
+}
+addOptiElement("golang");
+
+// Edit 2nd Child
+const secondChild=document.querySelector("li:nth-child(2)")
+// secondChild.innerHTML="Mojo";  not optimise
+const newEle=document.createElement('li');
+newEle.textContent='Mojo'; //it is also not optimise
+secondChild.replaceWith(newEle);
+
+//edit-->edit javascript to type script
+const firstChild=document.querySelector("li:first-child");
+firstChild.outerHTML='<li>TypeScript</li>'
+
+//remove--> remove the last child
+const lastlang=document.querySelector('li:last-child');
+lastlang.remove();//golang removed
+</script>
+</html>
