@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Event</title>
+</head>
+<body>
+    <div>
+        <img id="first" src="" alt="photoshop">
+        <img id="Second"  src="" alt="prime">
+        <img id="third"  src="" alt="altman">
+        <img id="fourth" src="" alt="bumblebee">
+        <img id="five" src="" alt="signature">
+    </div>
+</body>
+<script>
+    // document.getElementById("first").onclick=function(){
+    //     alert("hey")
+    // }  //this is old type...it provide less features
+
+
+    //***Important for interviews***
+    document.getElementById("first").addEventListener('click',function(){
+        alert("Hey...how is your day?")
+    })
+    //this is modern approach ...it can listen many events like here we use 'click' 
+</script>
+</html>
