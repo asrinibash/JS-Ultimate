@@ -17,7 +17,7 @@ console.table([accountId,accountName,accountBalance,accountCity]);
 // it can be declared multiple times
 // it can be initialized at the time of declaration or later
 // it is a global variable and can be accessed anywhere in the program
-//prefer not to use var beacuse of its global nature creates issues in large programs
+// prefer not to use var beacuse of its global nature creates issues in large programs
 // var is global scoped and not block scoped --> it can be accessed outside the block
 
 // let :
@@ -28,7 +28,7 @@ console.table([accountId,accountName,accountBalance,accountCity]);
 // let is block scoped and not global scoped --> it cannot be accessed outside the block
 // it is a better alternative to var
 
-//Automatically :  auto declaration 
+// Automatically :  auto declaration 
 // accountCity="Bangalore" --> allowed to change the value 
 // it can be declared multiple times
 // it is not consider good programming practice so always declare variables before using them
