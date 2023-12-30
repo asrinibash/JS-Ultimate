@@ -5,7 +5,7 @@
 // " Conversion Operation -> convert one datatype to another datatype (Important in JS) "
 
 // 1. Number() -> convert to number
-// const score="33"  //-> number
+// const score=33 //-> number
 // const score="33abc"//-> Nan (Not a Number)
 // const score=null; //-> null -> output is 0 when we convert to number using Number() function
 // const score=undefined; //-> undefined -> output is NaN when we convert to number using Number() function
