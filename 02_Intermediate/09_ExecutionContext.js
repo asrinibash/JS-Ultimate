@@ -1,4 +1,4 @@
-//JavaScript Execution context-the files we files we had written in javascript ho wjavascript will run it or execute it
+//JavaScript Execution context-the files we had written in javascript how javascript will run it or execute it
 //first global execution context is creted when run a js code and assigned to this keyword
 //javascript is single threded
 
