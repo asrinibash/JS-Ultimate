@@ -1,29 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Html Event</title>
-</head>
-<body>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
     <div>
-        <img id="first" src="" alt="photoshop">
-        <img id="Second"  src="" alt="prime">
-        <img id="third"  src="" alt="altman">
-        <img id="fourth" src="" alt="bumblebee">
-        <img id="five" src="" alt="signature">
+      <ul id="unorderList">
+        <li><img id="first" src="" alt="photoshop" /></li>
+        <li><img id="Second" src="" alt="prime" /></li>
+        <li><img id="third" src="" alt="altman" /></li>
+        <li><img id="fourth" src="" alt="bumblebee" /></li>
+        <li><img id="five" src="" alt="signature" /></li>
+        <a id="google" href="https://google.com">Click to redirect google</a>
+      </ul>
     </div>
-</body>
-<script>
+  </body>
+  <script>
     // document.getElementById("first").onclick=function(){
     //     alert("hey")
     // }  //this is old type...it provide less features
 
-
     //***Important for interviews***
-    document.getElementById("first").addEventListener('click',function(){
-        alert("Hey...how is your day?")
-    })
-    //this is modern approach ...it can listen many events like here we use 'click' 
-</script>
+    // document.getElementById("first").addEventListener(
+    //   "click",
+    //   function () {
+    //     alert("Hey...how is your day?");
+    //   },
+    //   false
+    // ); //by default 'false' is there we don't need to write it..but in some interview if we dont write 'false' it will not work
+    // //this is modern approach ...it can listen many events like here we use 'click'
+
+    // //attachEvent()
+    // //jQuery-on (using on)
+
+    // //Event object
+    // document.getElementById("first").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log(e);
+    //   },
+    //   false
+    // );
+
+    // //-----------------------------------*****---------------------------------------------
+    // //Importants topic in EventListener
+    // //  1.type 2.timeStamp 3.defaultPrevented
+    // //  4.target 5.toElement 6.srcElement 7.currentTarget
+    // //  Interview -> clientX, clientY, ScreenX, ScreenY
+    // //  listen Special Keys-> altKey, clrtKey, shiftKey, keyCode
+    // //-------------------------------------------------------------------------------------
+
+    // // * Event Propagation ->
+    // // there are 2 types of event propagation
+    // //       1-> Event Bubbling --> this is mainly uses (if we give parameter 'false' you can see at line-36)
+    // //       2-> Event Capturing -->if we give 'true' parameter
+
+    // // Example: Event Propagation
+
+    // // Event Bubbling -> As we give eventlistener both to parent and child -> it results first child message then parent message (As we give here true)
+    // // Because Event Bubbling is Buttom Up
+    // document.getElementById("unorderList").addEventListener(
+    //   //here we give id of 'ul'
+    //   "click",
+    //   function (e) {
+    //     console.log("run ul event");
+    //   },
+    //   false
+    // );
+    // document.getElementById("first").addEventListener(
+    //   // here we give specific id of the image
+    //   "click",
+    //   function (e) {
+    //     console.log(e);
+    //     // e.stopPropagation(); // this method stops event bubbling
+    //   },
+    //   false
+    // );
+
+    //  document.getElementById('google').addEventListener('click',function(e){
+    //     e.preventDefault(); //it will stop redirecting to url
+    //     e.stopPropagation();// we can stop bubbling
+    //     console.log("Google Clicked");
+    //  })
+    // //**Event Capturing -> In the above situation if we give both parameter to true the it shows first parent message then child message
+    // //Because Capturing is Top down approach
+
+
+    //Task to remove the image when it clicked
+    document.querySelector('#unorderList').addEventListener('click',function(e){
+        // let removeIt=e.target.parentNode; //here we targeting the 'li' tag(which is it s parent)
+        // // removeIt.remove();  //this newer version
+        // removeIt.parentNode.removeChild(removeIt); //this is the older version
+
+        //**task to give condition for only image will remove
+        console.log(e.target.tagName);
+        if(e.target.tagName==='IMG'){
+          let removeIt=e.target.parentNode;
+          removeIt.remove();
+        }
+    },false)
+
+
+  </script>
 </html>
