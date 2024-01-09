@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="start">start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //task- 1 : task for when we click the start button start interval and when we click stop interval it will stop the interval
+     const sayDate=function(){
+        console.log("Srinu",Date.now());
+     }
+     document.querySelector('#start').addEventListener('click',function(){
+       const set= setInterval(sayDate,2000);
+        // setInterval(sayDate,2000,"srinu"); we can give the parameter for sayDate function
+        document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(set);
+        })
+     })
+
+
+
+
+</script>
+</html>
