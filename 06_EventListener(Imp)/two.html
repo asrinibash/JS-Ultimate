@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur Code</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //Example 1:
+    // setTimeout(function(){
+    //     console.log("Hello Srinibash");
+    // },2000);
+
+    //Example: 2
+    // const saySrinibash=function(){
+    //     console.log("Hello Srinibash");
+    // }
+    // setTimeout(saySrinibash,2000); //here it takes the function reference
+
+    //Example 3:
+    const changeText=function(){
+        document.querySelector('h1').innerHTML="Best JS Course"
+    }
+   const changeMe= setTimeout(changeText,2000); //we cought on the variable it doesnot stop executing 
+    //JS is also provided us for stop the settime out function
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearTimeout(changeMe); //clear time out funtion is clear the call stacks of settime out
+        console.log("Stopped");
+    })
+    
+
+     
+</script>
+</html>
