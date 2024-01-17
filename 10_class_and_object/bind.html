@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bind Example</title>
+</head>
+<body>
+    <button>Button</button>
+    <script>
+class React{
+    constructor(){
+        this.library="React"
+        this.server="https://localhost:3000"
+
+        //requrement->when page lodded one react object will create and give reference when button clicked
+         
+        document
+            .querySelector('button')
+            // .addEventListener('click',this.handleClick); //without bind it doesnot refer to React object it refer to its lexical environment
+
+            .addEventListener('click',this.handleClick.bind(this)) //Now it can access react class properties
+    }
+    handleClick(){
+        console.log("Button Clicked");
+        console.log(this);
+    }
+}
+
+//when page lodded Object have created
+const obj=new React();
+
+    </script>
+</body>
+</html>
+<!-- 
+    why  'this' will refer to button without bind and 'this.server' refer to undefined ?
+    -> Because this will overide by button lexical environment after completing of function it will removed so this.server refer to null
+    -> if we bind the react class reference to button then after removed also it  can access react class properties
+ -->
