@@ -58,3 +58,4 @@ console.log(addTwo(3,4));//-->7
 //when we returning object in inplace returning
 let wow=()=>({username:"srinu",pass:90282});  //-> type 2
 //we have to wrap up with () otherwise it prints undefined
+

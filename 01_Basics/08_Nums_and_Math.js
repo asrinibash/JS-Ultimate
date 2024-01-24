@@ -4,6 +4,7 @@
 //Another way to create Number variable by using new keyword
 // const n=new Number(5000); //specially cast to Number
 // console.log(n);  // output: [Number: 5000]
+
 //when we create a number obeject it unlock some properties of number just like string properties
 // console.log(n.toString().length);//now it became string we use string methods here
 // console.log(n.toFixed(2));//just like float we use in c it means %.2f
