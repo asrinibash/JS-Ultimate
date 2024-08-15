@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Real Example</title>
+</head>
+<body style="display: flex; align-items: center; justify-content: center;">
+    <button id="orange">Orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+    // document.getElementById("orange").onclick = function() {
+    //     document.body.style.backgroundColor="orange";
+    // }
+    // document.getElementById('green').onclick=function(){
+    //     document.body.style.backgroundColor="green";
+    // }
+
+    //if we have maximum number of buttons and colors then we have loop over so we need to create a funtion
+    
+    function clickHandler(color){
+
+        return function(){
+            document.body.style.backgroundColor=color;
+        } //here we need to return a function then it will work
+    }
+
+    document.querySelector("#orange").onclick=clickHandler("orange");
+    document.querySelector("#green").onclick=clickHandler("green");
+
+
+</script>
+</html>
